@@ -6,7 +6,7 @@ Asch有三种网络类型，分别是localnet，testnet，mainnet，后两种是
 
 - localnet：运行在本地的、只有一个节点（101个受托人都配置在本地的config.json文件中）的私链，主要是为了方便本地测试和开发。locanet就是私有链。    
 - testnet：Asch链公网测试环境，由多个服务器组成，具备完整的p2p广播、分布式存储等，在功能上跟mainnet一致，和mainnet的区别在于magic不同（可以理解为用于区分不同链的id，目前Asch testnet的magic为594fe0f3，mainnet的magic为：5f5b3cf5）    
-- mainnet：Asch主网正式环境，这上面的XAS Token会在各大交易平台进行交易。    
+- mainnet：Asch主网正式环境，这上面的OTC Token会在各大交易平台进行交易。    
 
 
 
@@ -141,7 +141,7 @@ DApp meta information is saved to ./dapp.json ...
     publicKey: '74db8511d0021206abfdc993a97312e3eb7f8595b8bc855d87b0dc764cdfa5a8' } ]
 Done
 
-// 在http://127.0.0.1:4096用localnet的创世账户“someone manual strong movie roof episode eight spatial brown soldier soup motor”登陆（该账户中有初始发行的1亿xas token），然后给A8QCwz5Vs77UGX9YqBg9kJ6AZmsXQBC8vj地址转10000个xas
+// 在http://127.0.0.1:4096用localnet的创世账户“someone manual strong movie roof episode eight spatial brown soldier soup motor”登陆（该账户中有初始发行的1亿otc token），然后给A8QCwz5Vs77UGX9YqBg9kJ6AZmsXQBC8vj地址转10000个otc
 
 > asch-cli registerdapp -f dapp.json -e "possible melt adapt spoon wing coyote found flower bitter warm tennis easily"
 # 返回结果如下,这就是应用id。每个应用注册时返回的id不同，请记下你自己的应用id
@@ -220,7 +220,7 @@ dapp的前后端通讯协议一般可以分为两大类：读和写。
 读指的是数据查询，比如内置的区块查询、交易查询、转账记录，以及自己定义和实现的一些查询接口。    
 写指的是合约调用或事务执行，比如发起转账、设置昵称、提现等，同样，也包括其他的由开发者实现的各种合约或事务。     
 
-每一个写入操作都需要消耗燃料资产，模板dapp默认的燃料是XAS，开发者可以通过调用相关接口改为适合您的燃料类型，可以设置成任意其他资产，包括dapp内置资产。
+每一个写入操作都需要消耗燃料资产，模板dapp默认的燃料是OTC，开发者可以通过调用相关接口改为适合您的燃料类型，可以设置成任意其他资产，包括dapp内置资产。
 如果你您设置的燃料为外部资产，则需要从主链转入资产到这个dapp，这个过程叫充值，相反的过程叫做提现，这都是通过asch的跨链协议实现的。
 
 充值有三种方式：

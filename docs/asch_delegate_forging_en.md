@@ -1,7 +1,7 @@
 title: Delegators and forging of Asch
 ---
 
-Each account in Asch system can be registered as a delegator (100XAS is payable).
+Each account in Asch system can be registered as a delegator (100OTC is payable).
 
 A delegator can accept any votes from coin holders. When the rate of vote reaches into top 101,
 the delegators can obtain the right to account(that is, the right of block production, which is

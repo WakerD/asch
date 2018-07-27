@@ -148,7 +148,7 @@ async function testAgent() {
   for (const agent of config.agents) {
     for (const clientele of agent.clienteles) {
       const uri = `/v2/accounts/${clientele.address}`
-      const balance = (await lib.apiGetAsync(uri)).body.account.xas
+      const balance = (await lib.apiGetAsync(uri)).body.account.otc
       const trs = {
         secret: clientele.secret,
         type: 4,

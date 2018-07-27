@@ -11,7 +11,7 @@ Table of Contents
          * [<strong>2.3 设置二级密码,type=1</strong>](#23-设置二级密码type1)
          * [<strong>2.4 账户锁仓,type=100</strong>](#24-账户锁仓type100)
       * [<strong>3 普通交易transactions</strong>](#3-普通交易transactions)
-         * [<strong>3.1 在主链转账XAS,type=0</strong>](#31-在主链转账xastype0)
+         * [<strong>3.1 在主链转账OTC,type=0</strong>](#31-在主链转账otctype0)
          * [<strong>3.2 根据交易内容获取交易id</strong>](#32-根据交易内容获取交易id)
       * [<strong>4 资产相关uia</strong>](#4-资产相关uia)
          * [<strong>4.1 资产发行商注册,type=9</strong>](#41-资产发行商注册type9)
@@ -161,7 +161,7 @@ var AschJS = require('asch-js');
 
 ## **3 普通交易transactions**  
 
-### **3.1 在主链转账XAS,type=0**
+### **3.1 在主链转账OTC,type=0**
 
 `transaction.createTransaction(recipientId, amount, message, secret, secondSecret)`
 `备注` 在主链的交易类型为0
@@ -175,7 +175,7 @@ var AschJS = require('asch-js');
 ```
 > var targetAddress = "16358246403719868041";  
 undefined
-> var amount = 100*100000000;   //100 XAS
+> var amount = 100*100000000;   //100 OTC
 undefined
 > var message = 'beizhu';
 undefined
@@ -203,7 +203,7 @@ undefined
 
 ```
 > var targetAddress = "16358246403719868041";  
-> var amount = 100*100000000;   //100 XAS
+> var amount = 100*100000000;   //100 OTC
 > var message = 'beizhu';
 > transaction = AschJS.transaction.createTransaction(targetAddress, amount, message, secret, secondSecret)
 { type: 0,
@@ -600,7 +600,7 @@ undefined
 
 ```
 var dappid = "bebe3c57d76a5bbe3954bd7cb4b9e381e8a1ba3c78e183478b4f98b9d532f024";  
-var currency = "XAS";  
+var currency = "OTC";  
 var amount = 10*100000000 ;  
 
 > AschJS.transfer.createInTransfer(dappid, currency, amount, secret, secondSecret || undefined); 
@@ -613,7 +613,7 @@ var amount = 10*100000000 ;
   asset: 
    { inTransfer: 
       { dappId: 'bebe3c57d76a5bbe3954bd7cb4b9e381e8a1ba3c78e183478b4f98b9d532f024',
-        currency: 'XAS' } },
+        currency: 'OTC' } },
   signature: '6907c1402c702e0fd504a8734a047c1bb216d437e65d5675325846b92ef8b916fc634ea7e33a7c72c60c058d1496d0385c95e39a8291e27b2dceb2f40b6aed02',
   signSignature: '86de438431c639124a13429e8c6a8c13a5cbbbab3a8323ae08b56f65faeff6d816815d7cdecfdb7287077b14e4d14865637efc9d7fd72d085b0aa9d82f27170c',
   id: '25be71c296430a409cfeaf1ffaa957d18793f3695db07a846c22a7c467c45994' }
@@ -693,14 +693,14 @@ var amount = 10*100000000 ;
 - `recipientId` 提现接收者id
 - `dappId` dapp id
 - `transactionId` 提现交易id,该交易id是编号为2的智能合约在侧链dapp上所创建的
-- `currency` 提现资产名(XAS或者UIA)
+- `currency` 提现资产名(OTC或者UIA)
 - `amount` 提现数额
 
 ```
 let recipientId = 'AFUH568CbGC2GPcE4gXHiZhxdYQYfziz2J';
 let dappId = 'bebe3c57d76a5bbe3954bd7cb4b9e381e8a1ba3c78e183478b4f98b9d532f024';
 let transactionId = '123b04a6e380500903d8942622d57987661e72b2ae95464066d0af3f02c3c691';
-let currency = 'XAS'
+let currency = 'OTC'
 let amount = '10000000'
 
 > transaction = AschJS.transfer.createOutTransfer(recipientId, dappId, transactionId, currency, amount, secret, secondSecret);
@@ -714,7 +714,7 @@ let amount = '10000000'
    { outTransfer: 
       { dappId: 'bebe3c57d76a5bbe3954bd7cb4b9e381e8a1ba3c78e183478b4f98b9d532f024',
         transactionId: '123b04a6e380500903d8942622d57987661e72b2ae95464066d0af3f02c3c691',
-        currency: 'XAS',
+        currency: 'OTC',
         amount: '10000000' } },
   signature: '432d25e5c5b81fa3a5937adca2dd4a1e2a38e51f8896838601902e0c123a5ccb664bbc8a55344b9fedb773da98e0988e4e8d1ca99dcbc51a80ea3bc9a6b61806',
   signSignature: '8154c1f8305b9b957974e778de1e08dd3f08afcb70f27624d1385dbae9dfa6d0a3aaed6211ed8a40f4015f7e47312f0f205d94518c68e4deec8d76567f56f10f',
@@ -756,7 +756,7 @@ transaction.signatures.push(signature2) // 将签名加入到transaction的签�
    { outTransfer: 
       { dappId: 'bebe3c57d76a5bbe3954bd7cb4b9e381e8a1ba3c78e183478b4f98b9d532f024',
         transactionId: '123b04a6e380500903d8942622d57987661e72b2ae95464066d0af3f02c3c691',
-        currency: 'XAS',
+        currency: 'OTC',
         amount: '10000000' } },
   signature: '1dfae733408d374cd7be5f4b55183c0c05dc31341f93daaf82c26c80ab11035202502180dd78c5643edcd3bb481a38f352408bc35e44e6c1c53c95612fbca804',
   signSignature: '8f4f7aa06c02c0a3d637329e1a3b23489b91797b9f3477afd4314b2f78d1e8e8a369a640d75916bd9477e69363cf440c27124db615dced1701a1a934714afe05',
@@ -795,10 +795,10 @@ transaction.signatures.push(signature2) // 将签名加入到transaction的签�
 
 ## **8 签名验证相关crypto**
 
-自定义如下已签名的转账交易内容(在主链给16358246403719868041转账100XAS)，用于下面章节演示。
+自定义如下已签名的转账交易内容(在主链给16358246403719868041转账100OTC)，用于下面章节演示。
 ```
 > var targetAddress = "16358246403719868041";  
-> var amount = 100*100000000;   //100 XAS
+> var amount = 100*100000000;   //100 OTC
 > var message = 'beizhu';
 > transaction = AschJS.transaction.createTransaction(targetAddress, amount, message, secret, secondSecret)
 { type: 0,

@@ -184,7 +184,7 @@ describe('basic contracts', () => {
       args: [lockHeight, balanceWantToLock],
     }
 
-    // Transfer xas to clientele
+    // Transfer otc to clientele
     await lib.transactionUnsignedAsync(trsTransfer)
     await lib.onNewBlockAsync()
 

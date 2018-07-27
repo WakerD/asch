@@ -97,11 +97,11 @@ app.sdb.get('Variable', { key: 'foo' })
 }
 */
 
-let balance = app.sdb.get('Balance', { address: 'foo', currency: 'XAS' })
+let balance = app.sdb.get('Balance', { address: 'foo', currency: 'OTC' })
 /* output:
 {
   address: 'foo',
-  currency: 'XAS',
+  currency: 'OTC',
   balance: '1000000'
 }
 */
@@ -255,11 +255,11 @@ app.sdb.del('Article', { id: '100001' })
 示例:
 
 ```
-app.balances.get('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'XAS')
+app.balances.get('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'OTC')
 /* output:
 {
   address: 'AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85',
-  currency: 'XAS',
+  currency: 'OTC',
   balance: '10000000'
 }
 */
@@ -277,7 +277,7 @@ app.balances.get('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'XAS')
 示例:
 
 ```
-app.balances.increase('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'XAS', '100000')
+app.balances.increase('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'OTC', '100000')
 ```
 
 ### 2.3 app.balances.decrease(address, currency, amount)
@@ -292,7 +292,7 @@ app.balances.increase('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'XAS', '100000')
 示例:
 
 ```
-app.balances.decrease('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'XAS', '100000')
+app.balances.decrease('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'OTC', '100000')
 ```
 
 ### 2.4 app.balances.transfer(currency, amount, from, to)
@@ -308,7 +308,7 @@ app.balances.decrease('AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'XAS', '100000')
 示例:
 
 ```
-app.balances.transfer('XAS', '100000', 'AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'A4MFPoF3c9vCzZ3GGf9sNQ3rDy2q8aXuVF')
+app.balances.transfer('OTC', '100000', 'AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85', 'A4MFPoF3c9vCzZ3GGf9sNQ3rDy2q8aXuVF')
 ```
 
 ## 3 数据模型
@@ -454,7 +454,7 @@ app.model.Transfer.findAll({ senderId: 'AC3pinmvz9qX9cj6c7VrGigq7bpPxVJq85'})
 示例:
 
 ```
-app.feelPool.add('XAS', '10000000')
+app.feelPool.add('OTC', '10000000')
 ```
 
 ## 6. 自增ID
@@ -562,7 +562,7 @@ app.getContractName(1001) === 'cctime.postArticle'
 示例:
 
 ```
-app.registerFee(1001, '100000', 'XAS')
+app.registerFee(1001, '100000', 'OTC')
 ```
 ### 8.5 app.getFee(type)
 
@@ -577,7 +577,7 @@ app.getFee(1001)
 /* output:
 {
   min: '100000',
-  currency: 'XAS'
+  currency: 'OTC'
 }
 */
 ```
@@ -592,7 +592,7 @@ app.getFee(1001)
 示例:
 
 ```
-app.setDefaultFee('10000', 'XAS')
+app.setDefaultFee('10000', 'OTC')
 ```
 
 ### 8.7 app.getRealTime(epochTime)

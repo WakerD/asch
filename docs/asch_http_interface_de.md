@@ -29,7 +29,7 @@ Inhaltsverzeichnis
       - [2.3.4 Zeige die Transaktionsgebühr](#234-zeige-die-transaktionsgebühr)
       - [2.3.5 Zeige den Milestone](#235-zeige-den-milestone)
       - [2.3.6 Zeige die Belohnung für einen Block](#236-zeige-die-belohnung-für-einen-block)
-      - [2.3.7 Zeige die maximalen Anzahl an XAS im Umlauf](#237-zeige-die-maximalen-anzahl-an-xas-im-umlauf)
+      - [2.3.7 Zeige die maximalen Anzahl an OTC im Umlauf](#237-zeige-die-maximalen-anzahl-an-otc-im-umlauf)
       - [2.3.8 Zeige den momentanen Status der Blockchain](#238-zeige-den-momentanen-status-der-blockchain)
     - [2.4 Delegate](#24-delegate)
       - [2.4.1 Zeige die Anzahl aller Delegate](#241-zeige-die-anzahl-aller-delegate)
@@ -897,7 +897,7 @@ curl -k -X GET 'http://45.32.248.33:4096/api/blocks/getfee'
    
 Mögliche JSON Antwort:   
 ```js   
-{"success":true,"fee":10000000}     //die Transaktionsgebühr ist 0.1 XAS   
+{"success":true,"fee":10000000}     //die Transaktionsgebühr ist 0.1 OTC   
 ```   
    
 #### 2.3.5 Zeige den Milestone  
@@ -943,10 +943,10 @@ curl -k -X GET 'http://45.32.248.33:4096/api/blocks/getReward'
    
 Mögliche JSON Antwort:   
 ```js   
-{"success":true,"reward":350000000} //jeder von dir erzeugte Block wird mit 3.5 XAS belohnt
+{"success":true,"reward":350000000} //jeder von dir erzeugte Block wird mit 3.5 OTC belohnt
 ```   
    
-#### 2.3.7 Zeige die maximalen Anzahl an XAS im Umlauf
+#### 2.3.7 Zeige die maximalen Anzahl an OTC im Umlauf
 API Endpunkt: /api/blocks/getSupply   
 HTTP Verb: GET   
 Unterstütztes Format: keine   
@@ -956,7 +956,7 @@ Beschreibung der Antwort-Parameter:
 |Name	|Datentyp   |Beschreibung              |   
 |------ |-----  |----              |   
 |success|bool  |Die Daten wurden erfolgreich retouniert    
-|supply|integer  |XAS Summe im ganzen Netzwerk|    
+|supply|integer  |OTC Summe im ganzen Netzwerk|    
    
    
 Beispiel:   
@@ -966,7 +966,7 @@ curl -k -X GET 'http://45.32.248.33:4096/api/blocks/getSupply'
    
 Mögliche JSON Antwort:   
 ```js   
-{"success":true,"supply":10049222600000000} //Zur Zeit existieren 100492226 XAS im Testnet   
+{"success":true,"supply":10049222600000000} //Zur Zeit existieren 100492226 OTC im Testnet   
 ```   
    
 #### 2.3.8 Zeige den momentanen Status der Blockchain
@@ -983,7 +983,7 @@ Beschreibung der Antwort-Parameter:
 |fee|integer  |Transaktionsgebühr|
 |milestone|integer  |      |
 |reward|integer  |Belohnung des Blocks|    
-|supply|integer  |XAS Summe im ganzen Netzwerk|
+|supply|integer  |OTC Summe im ganzen Netzwerk|
    
    
 Beispiel:   
@@ -1220,7 +1220,7 @@ curl -k -X GET 'http://45.32.248.33:4096/api/delegates/fee?publicKey=ae256559d06
    
 Mögliche JSON Antwort:   
 ```js   
-{"success":true,"fee":10000000000}  //0.1 XAS   
+{"success":true,"fee":10000000000}  //0.1 OTC   
 ```   
    
 #### 2.4.6 Zeige die Schmiede-Informationen (Forging) anhand eines öffentlichen Schlüssels
@@ -1526,7 +1526,7 @@ Mögliche JSON Antwort:
 		"recipientId": null,   
 		"signature": "e76d9b25ec0fdaa88b19d59c5a222b7efdc04f738ee05896f55f4e6959229d9b1600ca25aa92fbea176668f3be7c12c506f2091e2b38c52ef0ece7a5d35e240a",   
 		"id": "1614688380530105232",   
-		"fee": 500000000,       //Die Gebühr für das Setzen eines zweiten Passworts sind 5 XAS   
+		"fee": 500000000,       //Die Gebühr für das Setzen eines zweiten Passworts sind 5 OTC   
 		"senderId": "250438937633388106"   
 	}   
 }   
@@ -1556,7 +1556,7 @@ Mögliche JSON Antwort:
 ```js   
 {   
 	"success": true,   
-	"fee": 500000000         //5 XAS   
+	"fee": 500000000         //5 OTC   
 }     
 ```   
    
@@ -1869,7 +1869,7 @@ Beispiel:
 ```js   
 var asch = require('asch-js');   
 var targetAddress = "16358246403719868041";  
-var amount = 100*100000000;   //100 XAS
+var amount = 100*100000000;   //100 OTC
 var password = 'measure bottom stock hospital calm hurdle come banner high edge foster cram';
 var secondPassword  = 'erjimimashezhi001';
 

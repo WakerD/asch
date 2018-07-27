@@ -37,7 +37,7 @@ There is a reciprocity relationship between the Asch main chain and the sidechai
 
 It is unnecessary for sidechain developers to provides all required machines. Oppositely, they can utilized existed nodes as long as the owners of those nodes allow to install the applications on them.
 
-In addition, XAS, the currency of Asch main chain, can be transferred to sidechain. Because of the characteristic of XAS that is able to trade in exchanges, it can be a reliable media of value that is suitable for the assets existed in sidechain. Developers do not need to concern the trading platform problems when they issue an asset in sidechain because they can exchange it with XAS directly.
+In addition, OTC, the currency of Asch main chain, can be transferred to sidechain. Because of the characteristic of OTC that is able to trade in exchanges, it can be a reliable media of value that is suitable for the assets existed in sidechain. Developers do not need to concern the trading platform problems when they issue an asset in sidechain because they can exchange it with OTC directly.
 
 
 ## Solution of Productivity

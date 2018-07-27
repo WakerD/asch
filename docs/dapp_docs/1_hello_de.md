@@ -123,8 +123,8 @@ ls -1 dapps/<dapp id>/modules/contracts/
 
 delegates.js            # Delegat-Registrierungs-Vertrag
 insidetransfer.js       # In-Chain Transfer Vertrag
-outsidetransfer.js      # XAS Einzahlungs-Vertrag
-withdrawaltransfer.js   # XAS Auszahlungs-Vertrag
+outsidetransfer.js      # OTC Einzahlungs-Vertrag
+withdrawaltransfer.js   # OTC Auszahlungs-Vertrag
 ```
 Entwickler müssen nur einen neuen Vertrag erstellen um ihre Business-Logik auszuführen.
 

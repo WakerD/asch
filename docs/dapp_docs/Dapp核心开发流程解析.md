@@ -81,14 +81,14 @@ cd asch && ./aschd start // 守护进程方式启动，日志记录到logs/debug
 或者其它的启动方式，比如pm2 start app.js
 
 ```
-然后在浏览器中打开 ```http://localhost:4096```，如果能看到Asch钱包登陆页面说明localnet的搭建和启动成功（localnet的创世账户密码："someone manual strong movie roof episode eight spatial brown soldier soup motor"，里面有一亿XAS）。如果页面报错，则需要检查app.js进程是否存在、日志报错信息等。
+然后在浏览器中打开 ```http://localhost:4096```，如果能看到Asch钱包登陆页面说明localnet的搭建和启动成功（localnet的创世账户密码："someone manual strong movie roof episode eight spatial brown soldier soup motor"，里面有一亿OTC）。如果页面报错，则需要检查app.js进程是否存在、日志报错信息等。
 
 
 ## 3.注册并启动第一个DAPP
 
 ### 3.1 发行资产（UIA）
 发行自己的资产，请参考这个链接http://docs.asch.mobi/docs/asch_issue_assets.html。
-这里我们在钱包页面生成一个新账户A，主密码为“almost journey future similar begin type write celery girl month forget breeze”，对应的地址是AAjoobuMcmkQ1gS8vTfBy3dQavBiH7sBCF，该账户将作为下面的cctime.XCT资产发行者、cctime DAPP的注册者以及给其它账户转账的发送者，创世账户给该地址转1000个xas。
+这里我们在钱包页面生成一个新账户A，主密码为“almost journey future similar begin type write celery girl month forget breeze”，对应的地址是AAjoobuMcmkQ1gS8vTfBy3dQavBiH7sBCF，该账户将作为下面的cctime.XCT资产发行者、cctime DAPP的注册者以及给其它账户转账的发送者，创世账户给该地址转1000个otc。
 
 A账户去注册发行商cctime，然后注册一个资产XCT（上限100亿，精度8，描述为：cctime.org的token时讯币，其它用默认的），最后发行10亿的cctime.XCT。
 
@@ -204,13 +204,13 @@ mv cctime 75d084dc91221b380e7a3c6b3b7467935572b4ebaa1e9a3db91e1239377c1fed
 
 #### 3.2.5 DAPP基本操作
 ##### 3.2.5.1 往DAPP中进行充值
-用密码“almost journey future similar begin type write celery girl month forget breeze”登陆Asch钱包，往DAPP中充值100 XAS（这个充值动作实质就是跨链操作），消耗0.1XAS手续费。
+用密码“almost journey future similar begin type write celery girl month forget breeze”登陆Asch钱包，往DAPP中充值100 OTC（这个充值动作实质就是跨链操作），消耗0.1OTC手续费。
 ![](http://asch-public.oss-cn-beijing.aliyuncs.com/pics/dapp%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E8%A7%A3%E6%9E%90/4.png)
 
 10秒后（也有可能是1秒、3秒或者8秒，这里实质是要等一个区块确认后才能看到充值余额，而10秒是一个块的默认出块时间），去 `http://localhost:4096/dapps/75d084dc91221b380e7a3c6b3b7467935572b4ebaa1e9a3db91e1239377c1fed/` 页面验证充值
 ![](http://asch-public.oss-cn-beijing.aliyuncs.com/pics/dapp%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E8%A7%A3%E6%9E%90/5.png)
 
-此时AAjoobuMcmkQ1gS8vTfBy3dQavBiH7sBCF这个账户在主链的XAS余额减少了100.1（0.1是充值手续费），而在侧链cctime中XAS余额增加了100。
+此时AAjoobuMcmkQ1gS8vTfBy3dQavBiH7sBCF这个账户在主链的OTC余额减少了100.1（0.1是充值手续费），而在侧链cctime中OTC余额增加了100。
 
 同理充值100 cctime.XCT资产。
 ![](http://asch-public.oss-cn-beijing.aliyuncs.com/pics/dapp%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E8%A7%A3%E6%9E%90/6.png)
@@ -227,7 +227,7 @@ A调用DAPP的系统内置合约给B用户转账10 cctime.XCT,这里展示的是
 
 ![](http://asch-public.oss-cn-beijing.aliyuncs.com/pics/dapp%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E8%A7%A3%E6%9E%90/9.png)
 
-此时A账户在DAPP中的XAS余额减少0.1（DAPP默认手续费是XAS，可以自定义为其它资产或者不收手续费），cctime.XCT余额减少10。B账户的cctime.XCT余额增加10.
+此时A账户在DAPP中的OTC余额减少0.1（DAPP默认手续费是OTC，可以自定义为其它资产或者不收手续费），cctime.XCT余额减少10。B账户的cctime.XCT余额增加10.
 
 账户A的余额：
 ![](http://asch-public.oss-cn-beijing.aliyuncs.com/pics/dapp%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E8%A7%A3%E6%9E%90/10.png)

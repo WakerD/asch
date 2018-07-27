@@ -40,7 +40,7 @@ Es existiert eine wechselseitige Beziehung zwischen der Asch Mainchain und den S
 
 Zwangsläufig muss ein Entwickler nicht alle Knoten die er für eine Sidechain benötigt zur Verfügung stellen. Es besteht auch die Möglichkeit, dass Besitzer von bestehenden Knoten die neue entwickelte Applikation auf ihrem Knoten ausführen.
 
-XAS, die Währung der Asch Mainchain, kann zu jeder Sidechain transferiert werden. XAS wird auf Crypto-Marktplätzen gehandelt. Die Währung einer Sidechain muss nicht zwangsläufig auf einem Crypto-Marktplatz gehandelt werden, sie kann einfach gegen XAS getauscht werden. So hat man als neue Sidechain nicht mit dem "wie bekomme ich meine Währung auf den Marktplatz?" Problem zu kämpfen. Die neue Währung kann direkt in XAS gewechselt werden.
+OTC, die Währung der Asch Mainchain, kann zu jeder Sidechain transferiert werden. OTC wird auf Crypto-Marktplätzen gehandelt. Die Währung einer Sidechain muss nicht zwangsläufig auf einem Crypto-Marktplatz gehandelt werden, sie kann einfach gegen OTC getauscht werden. So hat man als neue Sidechain nicht mit dem "wie bekomme ich meine Währung auf den Marktplatz?" Problem zu kämpfen. Die neue Währung kann direkt in OTC gewechselt werden.
 
 ## Produktivität
 

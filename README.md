@@ -117,7 +117,7 @@ node app.js --help
 ## Default localnet genesis account
 
 ```
-// This is the genesis account of localnet and one hundred million XAS in it.
+// This is the genesis account of localnet and one hundred million OTC in it.
 {
   "keypair": {
     "publicKey": "8065a105c785a08757727fded3a06f8f312e73ad40f1f3502e0232ea42e67efd",

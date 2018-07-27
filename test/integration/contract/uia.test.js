@@ -4,7 +4,7 @@ const config = require('../../smoke/config')
 const lib = require('../../lib')
 
 describe('uia test', () => {
-  test('Transer xas to issuers', async () => {
+  test('Transer otc to issuers', async () => {
     const amount = 250000000000
     const f = 10000000
     for (const issuer of config.issuers) {
@@ -298,7 +298,7 @@ describe('uia test', () => {
     await lib.transactionUnsignedAsync(trs)
     await lib.onNewBlockAsync()
 
-    // TODO: If currency is not XAS, check table balances. If currency is XAS, check table accounts
+    // TODO: If currency is not OTC, check table balances. If currency is OTC, check table accounts
     // Check table withdrawals
   })
 

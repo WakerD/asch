@@ -16,7 +16,7 @@ const config = {
   amount: (() => Math.floor(10000 * Math.random())),
 }
 
-const xasTransfer = async (address, amount, message) => {
+const otcTransfer = async (address, amount, message) => {
   console.log(`transfer ${amount} to ${address}: ${message}`)
   const params = {
     secret: config.secret,
@@ -36,7 +36,7 @@ async function main() {
   for (let i = 0; i < 1000; i++) {
     const j = i % 10
     const amount = config.amount()
-    const result = await xasTransfer(accounts[j], amount, i.toString())
+    const result = await otcTransfer(accounts[j], amount, i.toString())
     const res = result.body
 
     if (!res.success) {

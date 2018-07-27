@@ -113,7 +113,7 @@ asch-cli/bin/asch-cli -H 127.0.0.1 -P 4096 crypto --generate
 
 **Our new Acccount** will be our account for this tutorial.
 
-We need **100 XAS** to register a dapp. Our new account has **0 XAS**. The **genesis** account has 100000000 XAS on it. Lets send some money to **our** account.
+We need **100 OTC** to register a dapp. Our new account has **0 OTC**. The **genesis** account has 100000000 OTC on it. Lets send some money to **our** account.
 
 
 ```
@@ -364,8 +364,8 @@ dapps
         └───contracts
                 delegates.js            # registering delegate contract
                 insidetransfer.js       # in-chain transfer contract
-                outsidetransfer.js      # XAS deposit contract
-                withdrawaltransfer.js   # XAS withdraw contract
+                outsidetransfer.js      # OTC deposit contract
+                withdrawaltransfer.js   # OTC withdraw contract
 ```
 
 Developers need to create a new contact to run business logic. That's all.

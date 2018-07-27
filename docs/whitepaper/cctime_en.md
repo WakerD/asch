@@ -281,9 +281,9 @@ CCTime official group2：65622549
 
 #8 Appendix A: XCT (Current Coin) First Round Airdrop Examples
 
-For example, if total number of Asch coin to participate in airdrop is 40 million（Xxas） this round and the weighting factor of Asch is 2, the Asch coin is calculated as 100 million（Sxas） totally.
+For example, if total number of Asch coin to participate in airdrop is 40 million（Xotc） this round and the weighting factor of Asch is 2, the Asch coin is calculated as 100 million（Sotc） totally.
 The proportion of Asch coin:
-Pxas = Xxas * Kxas / Sxas = 40 million * 2/100 million = 0.8
+Potc = Xotc * Kotc / Sotc = 40 million * 2/100 million = 0.8
 If total number of Bitcoin to participate in airdrop is 5 million（Xbtc） this round and the weighting factor of Bitcoin is 1, the Bitcoin is calculated as 20 million（Sbtc） totally.
 The proportion of Bitcoin:
 Pbtc = Xbtc * Kbtc / Sbtc = 5 million * 1/20 million = 0.25
@@ -294,16 +294,16 @@ If total number of Bitshare to participate in airdrop is 1 billion（Xbts） thi
 The proportion of Bitshare:
 Pbts = Xbts * Kbts / Sbts = 1 billion * 1 / 2.5 billion = 0.4
 A total airdrop amount of Asch coin earned:
-Gxas = DPxas / Pxas + Pbtc + Peth + Pbts = 1 billion * 0.8 / (0.8 + 0.25 + 0.5 + 0.4) = $ 410 million
+Gotc = DPotc / Potc + Pbtc + Peth + Pbts = 1 billion * 0.8 / (0.8 + 0.25 + 0.5 + 0.4) = $ 410 million
 A total airdrop amount of Bitcoin earned:
-Gbtc = DPbtc / Pxas + Pbtc + Peth + Pbts = 1 billion * 0.25 / (0.8 + 0.25 + 0.5 + 0.4) = 128 million
+Gbtc = DPbtc / Potc + Pbtc + Peth + Pbts = 1 billion * 0.25 / (0.8 + 0.25 + 0.5 + 0.4) = 128 million
 A total airdrop amount of Ethereum earned:
-Geth = DPeth / Pxas + Pbtc + Peth + Pbts = 1 billion * 0.5 / (0.8 + 0.25 + 0.5 + 0.4) = 256 million
+Geth = DPeth / Potc + Pbtc + Peth + Pbts = 1 billion * 0.5 / (0.8 + 0.25 + 0.5 + 0.4) = 256 million
 A total airdrop amount of Bitshare earned:
-Gbts = DPxas / Pxas + Pbtc + Peth + Pbts = 1 billion * 0.4 / (0.8 + 0.25 + 0.5 + 0.4) = 205 million
+Gbts = DPotc / Potc + Pbtc + Peth + Pbts = 1 billion * 0.4 / (0.8 + 0.25 + 0.5 + 0.4) = 205 million
 
-If the user j holds one percent (400,000)of Asch coin（Txasj）, the number of CCTime he can get is:
-Uxasj= 100million
+If the user j holds one percent (400,000)of Asch coin（Totcj）, the number of CCTime he can get is:
+Uotcj= 100million
 If the user j holds one percent (50,000)of Bitcoin（Tbtcj）, the number of CCTime he can get is:
 Ubtcj= 100million
 If the user j holds one percent (500,000)of Ethereum（Tethj）, the number of CCTime he can get is:

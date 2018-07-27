@@ -214,10 +214,10 @@ CCTime 官方 2 群：65622549
 
 #8 附录Ａ：XCT(时讯币)首轮空投示例
 
-举例：假如本轮参与阿希币的总量为 4000 万（Xxas）,阿希的加权系数为 2 阿希
-币的总量按照 1 亿（Sxas）计算。
+举例：假如本轮参与阿希币的总量为 4000 万（Xotc）,阿希的加权系数为 2 阿希
+币的总量按照 1 亿（Sotc）计算。
 阿希币的比例：
-Pxas=Xxas*Kxas/Sxas=4000 万*2/1 亿=0.8
+Potc=Xotc*Kotc/Sotc=4000 万*2/1 亿=0.8
 假如本轮参与比特币的总量为 500 万（Xbtc）,比特币的加权系数为 1，比特币
 的总量按照 2000 万（Sbtc）计算。
 比特币的比例：
@@ -231,15 +231,15 @@ Peth=Xeth*Keth/Seth=5000 万*1/1 亿=0.5
 比特股的比例：
 Pbts=Xbts*Kbts/Sbts=10 亿*1/25 亿=0.4
 阿希币获得的空投总量：
-Gxas=DPxas/Pxas+Pbtc+Peth+ Pbts=10 亿*0.8/（0.8+0.25+0.5+0.4）=4.10 亿
+Gotc=DPotc/Potc+Pbtc+Peth+ Pbts=10 亿*0.8/（0.8+0.25+0.5+0.4）=4.10 亿
 比特币获得的空投总量：
-Gbtc=DPbtc/Pxas+Pbtc+Peth+ Pbts =10 亿*0.25/（0.8+0.25+0.5+0.4）=1.28 亿
+Gbtc=DPbtc/Potc+Pbtc+Peth+ Pbts =10 亿*0.25/（0.8+0.25+0.5+0.4）=1.28 亿
 以太币获得的空投总量：
-Geth=DPeth/Pxas+Pbtc+Peth+ Pbts =10 亿*0.5/（0.8+0.25+0.5+0.4）=2.56 亿
+Geth=DPeth/Potc+Pbtc+Peth+ Pbts =10 亿*0.5/（0.8+0.25+0.5+0.4）=2.56 亿
 比特股获得的空投总量：
-Gbts=DPxas/Pxas+Pbtc+Peth+ Pbts=10 亿*0.4/（0.8+0.25+0.5+0.4）=2.05 亿
-假如用户 j 持有百分之一（40 万）阿希币（Txasj），可以获得 CCTime 数量：
-Uxasj=√40 万 ∗ 4.1 亿/∑√Txasj亿
+Gbts=DPotc/Potc+Pbtc+Peth+ Pbts=10 亿*0.4/（0.8+0.25+0.5+0.4）=2.05 亿
+假如用户 j 持有百分之一（40 万）阿希币（Totcj），可以获得 CCTime 数量：
+Uotcj=√40 万 ∗ 4.1 亿/∑√Totcj亿
 假如用户 j 持有百分之一（5 万）比特币（Tbtcj），可以获得 CCTime 数量：
 Ubtcj=√5 万 ∗ 1.28 亿/∑√Tbtcj亿
 假如用户 j 持有百分之一（50 万）以太币（Tethj），可以获得 CCTime 数量：

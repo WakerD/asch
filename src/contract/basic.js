@@ -48,28 +48,28 @@ module.exports = {
     amount = Number(amount)
     const sender = this.sender
     const senderId = sender.address
-    if (this.block.height > 0 && sender.xas < amount) return 'Insufficient balance'
-    sender.xas -= amount
+    if (this.block.height > 0 && sender.otc < amount) return 'Insufficient balance'
+    sender.otc -= amount
 
     let recipientAccount
     // Validate recipient is valid address
     if (app.util.address.isNormalAddress(recipient)) {
       recipientAccount = await app.sdb.load('Account', recipient)
       if (recipientAccount) {
-        app.sdb.update('Account', { xas: recipientAccount.xas }, { address: recipientAccount.address })
+        app.sdb.update('Account', { otc: recipientAccount.otc }, { address: recipientAccount.address })
       } else {
         recipientAccount = app.sdb.create('Account', {
           address: recipient,
-          xas: amount,
+          otc: amount,
           name: null,
         })
       }
     } else {
       recipientAccount = await app.sdb.load('Account', { name: recipient })
       if (!recipientAccount) return 'Recipient name not exist'
-      app.sdb.update('Account', { xas: recipientAccount.xas }, { address: recipientAccount.address })
+      app.sdb.update('Account', { otc: recipientAccount.otc }, { address: recipientAccount.address })
     }
-    app.sdb.update('Account', { xas: sender.xas }, { address: sender.address })
+    app.sdb.update('Account', { otc: sender.otc }, { address: sender.address })
 
     app.sdb.create('Transfer', {
       tid: this.trs.id,
@@ -77,7 +77,7 @@ module.exports = {
       senderId,
       recipientId: recipientAccount.address,
       recipientName: recipientAccount.name,
-      currency: 'XAS',
+      currency: 'OTC',
       amount: String(amount),
       timestamp: this.trs.timestamp,
     })
@@ -129,7 +129,7 @@ module.exports = {
     const MIN_LOCK_HEIGHT = 8640 * 30
     const sender = this.sender
     if (sender.isAgent) return 'Agent account cannot lock'
-    if (sender.xas - 100000000 < amount) return 'Insufficient balance'
+    if (sender.otc - 100000000 < amount) return 'Insufficient balance'
     if (sender.isLocked) {
       if (height !== 0
         && height < (Math.max(this.block.height, sender.lockHeight) + MIN_LOCK_HEIGHT)) {
@@ -154,7 +154,7 @@ module.exports = {
       sender.lockHeight = height
     }
     if (amount !== 0) {
-      sender.xas -= amount
+      sender.otc -= amount
       sender.weight += amount
       app.sdb.update('Account', sender, { address: sender.address })
 
@@ -199,7 +199,7 @@ module.exports = {
     }
     sender.isLocked = 0
     sender.lockHeight = 0
-    sender.xas += sender.weight
+    sender.otc += sender.weight
     sender.weight = 0
     app.sdb.update('Account', sender, { address: senderId })
 
@@ -237,7 +237,7 @@ module.exports = {
       app.sdb.create('Account', {
         address,
         name,
-        xas: 0,
+        otc: 0,
       })
     }
     app.sdb.create('Group', {
